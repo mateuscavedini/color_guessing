@@ -28,22 +28,22 @@
     </header>
 
     <main class="flex column">
-        <div class="flex" id="prompt"></div>
+        <div class="flex" id="display"></div>
         <div id="settings" class="flex evenly">
             <button id="new-color">NEW COLOR</button>
-            <p id="result"></p>
+            <p id="result" class="hidden"></p>
             <div id="difficulty">
-                <button id="easy">EASY</button> |
+                <button id="easy" class="pressed">EASY</button> |
                 <button id="hard">HARD</button>
             </div>
         </div>
         <div id="colors" class="flex evenly wrap">
-            <div class="easy square"></div>
-            <div class="easy square"></div>
-            <div class="easy square"></div>
-            <div class="hard square"></div>
-            <div class="hard square"></div>
-            <div class="hard square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="hard square hidden"></div>
+            <div class="hard square hidden"></div>
+            <div class="hard square hidden"></div>
         </div>
     </main>
 
