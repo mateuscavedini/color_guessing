@@ -14,6 +14,7 @@ let isOver = false
 function reset() {
     isOver = false
     display.style.backgroundColor = "transparent"
+    display.style.color = "white"
     result.classList.add("hidden")
     result.textContent = "TRY AGAIN!"
     btnNew.textContent = "NEW COLOR"
@@ -66,11 +67,23 @@ function endGame() {
     result.textContent = "CORRECT!"
     result.classList.remove("hidden")
     display.style.backgroundColor = selectedRGB
+    textColor()
     
     squares.forEach((sqr) => {
         sqr.classList.remove("remove")
         sqr.style.backgroundColor = selectedRGB
     })
+}
+
+// for better readability, changes the display's text color based on it's background color (Reference - W3C: https://www.w3.org/TR/AERT/#color-contrast)
+function textColor() {
+    let colorArray = selectedRGB.replace(/[rgb() ]/g, "").split(",").map(Number)
+    let colorBrightness = ((colorArray[0] * 299) + (colorArray[1] * 587) + (colorArray[2] * 114)) / 1000
+    console.log(colorBrightness)
+
+    if (colorBrightness > 125) {
+        return display.style.color = "black"
+    }
 }
 
 
