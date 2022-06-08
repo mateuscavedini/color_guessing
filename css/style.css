@@ -85,7 +85,7 @@ a:hover {
     justify-content: space-evenly;
 }
 
-.easy, .hard {
+.square {
     height: 10rem;
     width: 10rem;
     border: 1px solid white;
@@ -93,19 +93,26 @@ a:hover {
     cursor: pointer;
 }
 
-.hard {
+.pressed {
+    color: black;
+    background: white;
+}
+
+.hidden {
     visibility: hidden;
 }
 
-#result {
+.remove {
+    transition: 0.3s ease-in-out;
+    opacity: 0;
     visibility: hidden;
 }
 
-#prompt, #settings {
+#display, #settings {
     width: 100%;
 }
 
-#prompt {
+#display {
     font-size: 3rem;
     padding: 0.5rem 0;
     border-top-left-radius: 50px;
