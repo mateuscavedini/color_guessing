@@ -24,9 +24,9 @@ function colorGenerator() {
     reset()
     
     squares.forEach((sqr) => {
-        let r = Math.round(Math.random() * 255)
-        let g = Math.round(Math.random() * 255)
-        let b = Math.round(Math.random() * 255)
+        const r = Math.round(Math.random() * 255)
+        const g = Math.round(Math.random() * 255)
+        const b = Math.round(Math.random() * 255)
         sqr.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
     })
 
@@ -36,10 +36,9 @@ function colorGenerator() {
 }
 
 function colorSelector() {
-    let maxIndex
-    easyMode ? maxIndex = 2 : maxIndex = 5
+    const maxIndex = easyMode ? 2 : 5
 
-    let selectedIndex = Math.round(Math.random() * maxIndex)
+    const selectedIndex = Math.round(Math.random() * maxIndex)
     selectedRGB = squares[selectedIndex].style.backgroundColor
     
     display.textContent = selectedRGB.toUpperCase()
@@ -77,9 +76,8 @@ function endGame() {
 
 // for better readability, changes the display's text color based on it's background color (Reference - W3C: https://www.w3.org/TR/AERT/#color-contrast)
 function textColor() {
-    let colorArray = selectedRGB.replace(/[rgb() ]/g, "").split(",").map(Number)
-    let colorBrightness = ((colorArray[0] * 299) + (colorArray[1] * 587) + (colorArray[2] * 114)) / 1000
-    console.log(colorBrightness)
+    const colorArray = selectedRGB.replace(/[rgb() ]/g, "").split(",").map(Number)
+    const colorBrightness = ((colorArray[0] * 299) + (colorArray[1] * 587) + (colorArray[2] * 114)) / 1000
 
     if (colorBrightness > 125) {
         return display.style.color = "black"
