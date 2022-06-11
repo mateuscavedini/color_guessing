@@ -19,14 +19,12 @@ body {
 }
 
 header {
-    /* background-color: green; */
     flex-grow: 0.2;
+    text-align: center;
 }
 
 main {
-    /* background-color: red; */
     background-color: var(--color-bg-alt);
-    /* border-radius: 5%; */
     border-radius: 50px;
     flex-grow: 1;
     width: 75%;
@@ -118,19 +116,96 @@ a:hover {
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     border-bottom: 1px solid white;
-    /* background-color: black; */
 }
 
 #settings {
-    /* background-color: blue; */
     margin-bottom: auto;
     padding: 0.5rem 0;
     font-size: 1.5rem;
 }
 
 #colors {
-    /* background-color: yellow; */
     margin-bottom: auto;
     width: 40%;
     height: 50%;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 1440px) {
+    #colors {
+        width: 55%;
+        height: 50%;
+    }
+}
+
+@media (max-width: 1024px) {
+    #colors {
+        width: 75%;
+        height: 55%;
+    }
+
+    .square {
+        height: 9.5rem;
+        width: 9.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #colors {
+        width: 90%;
+        height: 50%;
+    }
+
+    .square {
+        height: 9rem;
+        width: 9rem;
+    }
+}
+
+@media (max-width: 425px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    #colors {
+        width: 100%;
+        height: 65%;
+    }
+
+    .square {
+        height: 9rem;
+        width: 9rem;
+    }
+}
+
+@media (max-width: 375px) {
+    :root {
+        font-size: 13px;
+    }
+    
+    #colors {
+        width: 100%;
+        height: 60%;
+    }
+
+    .square {
+        height: 9rem;
+        width: 9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        font-size: 11px;
+    }
+    
+    #colors {
+        width: 100%;
+        height: 50%;
+    }
+
+    .square {
+        height: 9rem;
+        width: 9rem;
+    }
 }
