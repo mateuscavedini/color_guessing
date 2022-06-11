@@ -2,5 +2,4 @@
 click the corresponding color to the RGB value
 
 ## TODO
-- improve functions
-- add responsiveness
+- improve responsiveness
